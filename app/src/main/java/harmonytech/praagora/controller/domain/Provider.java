@@ -1,6 +1,8 @@
 package harmonytech.praagora.controller.domain;
 
-public class Provider {
+import java.io.Serializable;
+
+public class Provider implements Serializable{
 
     private String name, email, birth, postalCode, cpf, phone, category, subcategory, description;
     private double rate;
