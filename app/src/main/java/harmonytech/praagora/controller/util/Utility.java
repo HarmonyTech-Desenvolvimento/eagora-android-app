@@ -96,6 +96,11 @@ public class Utility {
         return cpf.equals(cpf.substring(0,9) + digito1.toString() + digito2.toString());
     }
 
+    public static boolean verifyEmptyField(String email, String pass){
+
+        return (email.isEmpty() || pass.isEmpty());
+    }
+
     public static boolean isConnected(Activity activity){
         ConnectivityManager cm =
                 (ConnectivityManager)activity.getSystemService(Context.CONNECTIVITY_SERVICE);

@@ -40,19 +40,22 @@
                 android:layout_height="40dp"
                 android:background="#fff"
                 android:layout_marginBottom="7dp"
-                android:hint="    Email"
-                android:textSize="15dp"/>
+                android:hint="Email"
+                android:textSize="15sp"
+                android:padding="10dp"/>
 
             <EditText
-                android:id="@+id/senha_login"
+                android:id="@+id/password_login"
                 android:layout_width="310dp"
                 android:layout_height="40dp"
                 android:background="#fff"
-                android:hint="    Senha"
-                android:textSize="15dp"/>
+                android:hint="Senha"
+                android:textSize="15sp"
+                android:padding="10dp"/>
         </LinearLayout>
 
         <Button
+            android:id="@+id/button_login"
             android:layout_width="310dp"
             android:layout_height="55dp"
             android:text="Entrar"

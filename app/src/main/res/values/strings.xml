@@ -4,7 +4,14 @@
     <string name="error_failed_signin_email_exists">Falha ao entrar\n\nEsse e-mail já está sendo usado em nosso sistema e dispositivo.\nTente novamente com outro método de login.</string>
     <string name="error_unknown_error">Erro desconhecido, tente novamente e contate o administrador.</string>
     <string name="error_signin">Algo deu errado ao fazer login, tente novamente.</string>
+    <string name="error_invalid_email">Email inválido, digite novamente.</string>
+    <string name="error_password_too_small">Sua senha precisa ter pelo menos 6 caracteres, digite novamente.</string>
+    <string name="error_all_fields_required">Todos os campos são obrigatórios, tente novamente.</string>
+    <string name="error_user_password_incorrect">Usuário e/ou senha incorreto(s).</string>
 
+    <string name="user_created_successfully">Usuário criado com sucesso.</string>
+
+    <string name="creating_user">Criando o usuário, por favor aguarde…</string>
     <string name="processing_login">Processando login, por favor aguarde…</string>
 
     <string name="facebook_app_id">335153270268330</string>
