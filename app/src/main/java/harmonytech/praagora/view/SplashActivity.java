@@ -1,16 +1,26 @@
 package harmonytech.praagora.view;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.os.Handler;
+import android.util.Base64;
+import android.util.Log;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 import harmonytech.praagora.R;
 import harmonytech.praagora.controller.util.Singleton;
 
 public class SplashActivity extends AppCompatActivity {
+
+    private static final String TAG = "teste";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

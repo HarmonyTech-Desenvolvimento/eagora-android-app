@@ -46,7 +46,7 @@ public class ProviderDetailsActivity extends AppCompatActivity {
         tvWpp.setText(provider.getPhone());
 
         rbRate = (RatingBar) findViewById(R.id.ratingBar);
-        rbRate.setRating((float) provider.getRate());
+        rbRate.setRating((float)provider.getRate());
 
         ActionBar actionBar = getSupportActionBar();
 
