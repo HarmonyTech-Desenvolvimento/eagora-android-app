@@ -9,6 +9,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import harmonytech.praagora.R;
+import harmonytech.praagora.controller.domain.Provider;
 import harmonytech.praagora.controller.util.Utility;
 
 public class ProviderDetailsActivity extends AppCompatActivity {
@@ -21,29 +22,31 @@ public class ProviderDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_provider_details);
 
+        Provider provider = (Provider) getIntent().getSerializableExtra(Utility.PROVIDER);
+
         tvDescriptionProvider = (TextView) findViewById(R.id.descriptionProvider);
-        tvDescriptionProvider.setText(getIntent().getStringExtra(Utility.PROVIDER_DESCRIPTION));
+        tvDescriptionProvider.setText(provider.getDescription());
 
         tvCategory = (TextView) findViewById(R.id.detailsCategory);
-        tvCategory.setText(getIntent().getStringExtra(Utility.PROVIDER_CATEGORY));
+        tvCategory.setText(provider.getCategory());
 
         tvSubcategory = (TextView) findViewById(R.id.detailsSpecialty);
-        tvSubcategory.setText(getIntent().getStringExtra(Utility.PROVIDER_SUBCATEGORY));
+        tvSubcategory.setText(provider.getSubcategory());
 
         tvName = (TextView) findViewById(R.id.detailsName);
-        tvName.setText(getIntent().getStringExtra(Utility.PROVIDER_NAME));
+        tvName.setText(provider.getName());
 
         tvEmail = (TextView) findViewById(R.id.detailsEmail);
-        tvEmail.setText(getIntent().getStringExtra(Utility.PROVIDER_EMAIL));
+        tvEmail.setText(provider.getEmail());
 
         tvPhone = (TextView) findViewById(R.id.detailsPhone);
-        tvPhone.setText(getIntent().getStringExtra(Utility.PROVIDER_PHONE));
+        tvPhone.setText(provider.getPhone());
 
         tvWpp = (TextView) findViewById(R.id.detailsWpp);
-        tvWpp.setText(getIntent().getStringExtra(Utility.PROVIDER_PHONE));
+        tvWpp.setText(provider.getPhone());
 
         rbRate = (RatingBar) findViewById(R.id.ratingBar);
-        rbRate.setRating((float) getIntent().getDoubleExtra(Utility.PROVIDER_RATE, 0.01));
+        rbRate.setRating((float) provider.getRate());
 
         ActionBar actionBar = getSupportActionBar();
 

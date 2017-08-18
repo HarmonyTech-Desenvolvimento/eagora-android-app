@@ -55,13 +55,7 @@ public class ProviderFragment extends Fragment implements RecyclerViewOnClickLis
     @Override
     public void onClickListener(View view, int position) {
         Intent intent = new Intent(getActivity(), ProviderDetailsActivity.class);
-        intent.putExtra(Utility.PROVIDER_NAME, mList.get(position).getName());
-        intent.putExtra(Utility.PROVIDER_EMAIL, mList.get(position).getEmail());
-        intent.putExtra(Utility.PROVIDER_PHONE, mList.get(position).getPhone());
-        intent.putExtra(Utility.PROVIDER_RATE, mList.get(position).getRate());
-        intent.putExtra(Utility.PROVIDER_CATEGORY, mList.get(position).getCategory());
-        intent.putExtra(Utility.PROVIDER_SUBCATEGORY, mList.get(position).getSubcategory());
-        intent.putExtra(Utility.PROVIDER_DESCRIPTION, mList.get(position).getDescription());
+        intent.putExtra(Utility.PROVIDER, mList.get(position));
         startActivity(intent);
     }
 

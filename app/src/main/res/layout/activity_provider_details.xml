@@ -26,13 +26,12 @@
             android:paddingTop="8dp"
             android:layout_below="@+id/detailsName"
             android:layout_centerHorizontal="true"
-            android:theme="@style/RatingBar"
             android:numStars="5"
-            android:stepSize="0.1"
-            android:isIndicator="true"
-            android:clickable="true"/>
-    </RelativeLayout>
+            android:theme="@style/RatingBar"
+            android:scaleX="0.7"
+            android:scaleY="0.7"/>
 
+    </RelativeLayout>
 
 
     <harmonytech.praagora.controller.custom_widgets.MyCustomTextView

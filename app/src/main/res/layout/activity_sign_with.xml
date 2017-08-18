@@ -6,13 +6,13 @@
     android:background="@drawable/service"
     tools:context="harmonytech.praagora.view.SignWithActivity">
 
-    <TextView
+    <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="praAgora"
+        android:text="@string/title_login"
         android:textStyle="bold"
-        android:textSize="70dp"
+        android:textSize="75dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:textColor="@color/colorBackground"
@@ -34,7 +34,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="15dp">
 
-            <EditText
+            <harmonytech.praagora.controller.custom_widgets.MyCustomEditText
                 android:id="@+id/email_login"
                 android:layout_width="310dp"
                 android:layout_height="40dp"
@@ -51,21 +51,22 @@
                 android:background="#fff"
                 android:hint="Senha"
                 android:textSize="15sp"
-                android:padding="10dp"/>
+                android:padding="10dp"
+                android:inputType="textPassword" />
         </LinearLayout>
 
-        <Button
+        <harmonytech.praagora.controller.custom_widgets.MyCustomButton
             android:id="@+id/button_login"
-            android:layout_width="310dp"
-            android:layout_height="55dp"
-            android:text="Entrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_entrar_login"
             android:layout_gravity="center"
             android:layout_marginBottom="55dp"/>
 
-        <TextView
+        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="--------------------ou--------------------"
+            android:text="@string/ou_login"
             android:textSize="20dp"
             android:layout_gravity="center"
             android:layout_marginBottom="45dp"/>
