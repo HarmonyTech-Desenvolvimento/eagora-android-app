@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/service"
-    tools:context="harmonytech.praagora.view.SignWithActivity">
+    tools:context="harmonytech.praagoraa.view.SignWithActivity">
 
-    <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+    <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="15dp">
 
-            <harmonytech.praagora.controller.custom_widgets.MyCustomEditText
+            <harmonytech.praagoraa.controller.custom_widgets.MyCustomEditText
                 android:id="@+id/email_login"
                 android:layout_width="310dp"
                 android:layout_height="40dp"
@@ -55,7 +55,7 @@
                 android:inputType="textPassword" />
         </LinearLayout>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomButton
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomButton
             android:id="@+id/button_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="55dp"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ou_login"

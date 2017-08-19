@@ -4,7 +4,7 @@
     android:layout_height="55dip"
     android:orientation="vertical" >
 
-    <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+    <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
         android:id="@+id/lblListItem"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

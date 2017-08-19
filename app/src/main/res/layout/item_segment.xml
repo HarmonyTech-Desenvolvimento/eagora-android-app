@@ -28,7 +28,7 @@
             android:layout_height="35dp"
             android:layout_marginTop="115dp"
             android:background="#fff">
-            <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+            <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
                 android:id="@+id/segment_name"
                 android:text="Deldo de fresa"
                 android:fontFamily="sans-serif"

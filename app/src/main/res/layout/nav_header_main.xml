@@ -13,7 +13,7 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
 
-    <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+    <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="10dp"

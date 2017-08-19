@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="harmonytech.praagora">
+    package="harmonytech.praagoraa">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -31,7 +31,7 @@
         </activity>
 
         <activity
-            android:name=".view.SplashActivity"
+            android:name="harmonytech.praagoraa.view.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNoActionBar">
             <intent-filter>
@@ -41,48 +41,48 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.MainActivity"
+            android:name="harmonytech.praagoraa.view.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNoActionBar" />
         <activity
-            android:name=".view.SegmentCategoryActivity"
-            android:parentActivityName=".view.MainActivity"
+            android:name="harmonytech.praagoraa.view.SegmentCategoryActivity"
+            android:parentActivityName="harmonytech.praagoraa.view.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.SegmentDetailsActivity"
+            android:name="harmonytech.praagoraa.view.SegmentDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.RegisterServiceActivity"
+            android:name="harmonytech.praagoraa.view.RegisterServiceActivity"
             android:label="@string/screen_register_service"
-            android:parentActivityName=".view.MainActivity"
+            android:parentActivityName="harmonytech.praagoraa.view.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.DoubtActivity"
+            android:name="harmonytech.praagoraa.view.DoubtActivity"
             android:label="@string/screen_faq"
-            android:parentActivityName=".view.MainActivity"
+            android:parentActivityName="harmonytech.praagoraa.view.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.TermsConditionsActivity"
+            android:name="harmonytech.praagoraa.view.TermsConditionsActivity"
             android:label="@string/screen_terms_condition"
-            android:parentActivityName=".view.MainActivity"
+            android:parentActivityName="harmonytech.praagoraa.view.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.ProviderDetailsActivity"
+            android:name="harmonytech.praagoraa.view.ProviderDetailsActivity"
             android:label=""
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.ContactUsActivity"
+            android:name="harmonytech.praagoraa.view.ContactUsActivity"
             android:label="@string/screen_contact_us"
-            android:parentActivityName=".view.MainActivity"
+            android:parentActivityName="harmonytech.praagoraa.view.MainActivity"
             android:screenOrientation="portrait" />
         />
         <activity
-            android:name=".view.SignWithActivity"
+            android:name="harmonytech.praagoraa.view.SignWithActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             />
         <activity
-            android:name=".view.UsersCategoryActivity"
+            android:name="harmonytech.praagoraa.view.UsersCategoryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>

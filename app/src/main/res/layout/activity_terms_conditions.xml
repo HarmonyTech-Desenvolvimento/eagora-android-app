@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    tools:context="harmonytech.praagora.view.TermsConditionsActivity">
+    tools:context="harmonytech.praagoraa.view.TermsConditionsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="4dp">
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_title"
@@ -19,109 +19,109 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_title1"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_1"
             android:layout_marginTop="4dp"
             android:gravity="left"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_2"
             android:layout_marginTop="8dp"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_3"
             android:layout_marginTop="8dp"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_4"
             android:layout_marginTop="8dp"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_5"
             android:layout_marginTop="8dp"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_6"
             android:layout_marginTop="8dp"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_7"
             android:layout_marginTop="8dp"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_8"
             android:layout_marginTop="8dp"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_9"
             android:layout_marginTop="8dp"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_10"
             android:layout_marginTop="8dp"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_11"
             android:layout_marginTop="8dp"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_11"
             android:layout_marginTop="8dp"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_12"
             android:layout_marginTop="8dp"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_13"
             android:layout_marginTop="8dp"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_14"
             android:layout_marginTop="8dp"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_15"
             android:layout_marginTop="8dp"/>
 
-        <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+        <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/terms_16"

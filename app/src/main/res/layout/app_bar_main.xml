@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="harmonytech.praagora.view.MainActivity">
+    tools:context="harmonytech.praagoraa.view.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

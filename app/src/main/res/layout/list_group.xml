@@ -7,7 +7,7 @@
     android:background="#FFF">
 
 
-    <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+    <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
         android:id="@+id/lblListHeader"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

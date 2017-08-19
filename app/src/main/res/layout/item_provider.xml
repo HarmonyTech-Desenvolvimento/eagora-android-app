@@ -25,7 +25,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+                <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
                     android:id="@+id/provider_name"
                     android:text="Deldo de fresa"
                     android:fontFamily="sans-serif"
@@ -39,7 +39,7 @@
                     android:layout_marginEnd="10dp"/>
 
 
-                <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+                <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
                     android:id="@+id/provider_phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginRight="10dp"/>
 
-                <harmonytech.praagora.controller.custom_widgets.MyCustomTextView
+                <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
                     android:id="@+id/provider_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

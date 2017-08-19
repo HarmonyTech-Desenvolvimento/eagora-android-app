@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="harmonytech.praagora.view.SegmentCategoryActivity">
+    tools:context="harmonytech.praagoraa.view.SegmentCategoryActivity">
 
     <ListView
         android:id="@+id/listView"
