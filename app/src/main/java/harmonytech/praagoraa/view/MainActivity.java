@@ -19,7 +19,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.VideoView;
 
 import com.facebook.login.LoginManager;
@@ -55,6 +57,8 @@ public class MainActivity extends AppCompatActivity
     NavigationView navigationView;
 
     SharedPreferences sharedPreferences;
+
+    Spinner state, city;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +96,14 @@ public class MainActivity extends AppCompatActivity
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        state = (Spinner)findViewById(R.id.sp_state);
+        city = (Spinner) findViewById(R.id.sp_city);
+
+
+        fillState();
+        fillCity();
+
 
         setupUI();
     }
@@ -318,5 +330,17 @@ public class MainActivity extends AppCompatActivity
                 startActivity(new Intent(this, RegisterServiceActivity.class));
                 break;
         }
+    }
+
+    public void fillState(){
+        ArrayAdapter<String> spinnerCountShoesArrayAdapterState = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.city));
+        city.setAdapter(spinnerCountShoesArrayAdapterState);
+    }
+
+    public void fillCity(){
+        ArrayAdapter<String> spinnerCountShoesArrayAdapterState = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.state));
+        state.setAdapter(spinnerCountShoesArrayAdapterState);
     }
 }

@@ -76,12 +76,32 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+            <LinearLayout
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/colorPrimary">
+                <Spinner
+                    android:id="@+id/sp_state"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content">
+                </Spinner>
+
+                <Spinner
+                    android:id="@+id/sp_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp">
+                </Spinner>
+            </LinearLayout>
+
             <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
                 android:id="@+id/categorias"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginStart="20dp"
+                android:layout_below="@id/location"
                 android:text="@string/label_main_categorias"
                 android:textSize="20sp"
                 android:layout_marginTop="14dp"/>
@@ -94,6 +114,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginEnd="10dp"
+                android:layout_below="@id/location"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/button_rounded"
                 android:textSize="12sp"
