@@ -19,6 +19,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -39,7 +40,7 @@ import harmonytech.praagoraa.controller.util.FontsOverride;
 import harmonytech.praagoraa.controller.util.Utility;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     ArrayList<Segment> recipesList = new ArrayList<>();
     SegmentFragment frag;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity
 
     SharedPreferences sharedPreferences;
 
-    Spinner state, city;
+    public Spinner spinnerState, spinnerCity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,15 +98,52 @@ public class MainActivity extends AppCompatActivity
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        state = (Spinner)findViewById(R.id.sp_state);
-        city = (Spinner) findViewById(R.id.sp_city);
-
+        spinnerState = (Spinner)findViewById(R.id.sp_state);
+        spinnerState.setOnItemSelectedListener(this);
+        spinnerCity = (Spinner) findViewById(R.id.sp_city);
+        spinnerCity.setOnItemSelectedListener(this);
+        spinnerCity.setEnabled(false);
 
         fillState();
         fillCity();
 
-
         setupUI();
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        int id = adapterView.getId();
+        String state = spinnerState.getSelectedItem().toString();
+
+        switch (id){
+            case R.id.sp_state:
+                switch (state) {
+                    case "Mato Grosso do Sul": {
+                        spinnerCity.setEnabled(true);
+                        ArrayAdapter<String> spinnerCountShoesArrayAdapterState = new ArrayAdapter<>(this,
+                                android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.ms));
+                        spinnerCity.setAdapter(spinnerCountShoesArrayAdapterState);
+                        break;
+                    }
+                    case "São Paulo": {
+                        spinnerCity.setEnabled(true);
+                        ArrayAdapter<String> spinnerCountShoesArrayAdapterState = new ArrayAdapter<>(this,
+                                android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.sp));
+                        spinnerCity.setAdapter(spinnerCountShoesArrayAdapterState);
+                        break;
+                    }
+                    default:
+                        spinnerCity.setSelection(0);
+                        spinnerCity.setEnabled(false);
+                        break;
+                }
+                break;
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+        //TODO
     }
 
     @Override
@@ -334,13 +372,13 @@ public class MainActivity extends AppCompatActivity
 
     public void fillState(){
         ArrayAdapter<String> spinnerCountShoesArrayAdapterState = new ArrayAdapter<>(this,
-                android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.city));
-        city.setAdapter(spinnerCountShoesArrayAdapterState);
+                android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.state));
+        spinnerState.setAdapter(spinnerCountShoesArrayAdapterState);
     }
 
     public void fillCity(){
         ArrayAdapter<String> spinnerCountShoesArrayAdapterState = new ArrayAdapter<>(this,
-                android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.state));
-        state.setAdapter(spinnerCountShoesArrayAdapterState);
+                android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.sp));
+        spinnerCity.setAdapter(spinnerCountShoesArrayAdapterState);
     }
 }

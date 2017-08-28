@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,6 +24,8 @@ public class SegmentCategoryActivity extends AppCompatActivity implements Adapte
     String segmento, segmentoFirebase;
     HashMap<String, ArrayList<String>> arraySegmento;
 
+    String city;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +34,8 @@ public class SegmentCategoryActivity extends AppCompatActivity implements Adapte
         segmento = getIntent().getStringExtra(Utility.SEGMENTO);
 
         segmentoFirebase = getIntent().getStringExtra(Utility.SEGMENTO_FIREBASE);
+
+        city = getIntent().getStringExtra(Utility.KEY_CONTENT_EXTRA_CITY);
 
         subcategorias = Singleton.getInstance().getSegmentos();
 
@@ -48,6 +53,7 @@ public class SegmentCategoryActivity extends AppCompatActivity implements Adapte
             intent.putExtra(FirebaseHelper.FIREBASE_DATABASE_PROVIDER_SUBCATEGORY, arraySegmento.get(Utility.HASH_MAP_FIREBASE).get(i));
             intent.putExtra(Utility.SEGMENT_DETAILS_TITLE, arraySegmento.get(Utility.HASH_MAP_TELA).get(i));
             intent.putExtra(Utility.SEGMENT_DETAILS_SUBTITLE, segmento);
+            intent.putExtra(Utility.KEY_CONTENT_EXTRA_CITY, city);
             startActivity(intent);
         }else{
             Utility.showSnackBarErrorMessage(this, getResources().getString(R.string.no_internet_connection));

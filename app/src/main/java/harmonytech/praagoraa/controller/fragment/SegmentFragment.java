@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -20,6 +22,7 @@ import harmonytech.praagoraa.controller.domain.Segment;
 import harmonytech.praagoraa.controller.interfaces.RecyclerViewOnClickListenerHack;
 import harmonytech.praagoraa.controller.util.Utility;
 import harmonytech.praagoraa.view.MainActivity;
+import harmonytech.praagoraa.view.RegisterServiceActivity;
 import harmonytech.praagoraa.view.SegmentCategoryActivity;
 
 public class SegmentFragment extends Fragment implements RecyclerViewOnClickListenerHack {
@@ -27,12 +30,15 @@ public class SegmentFragment extends Fragment implements RecyclerViewOnClickList
     RecyclerView mRecyclerView;
     public List<Segment> mList;
     public SegmentAdapter adapter;
+    Spinner spinnerCity;
 
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_segment, container, false);
+
+        spinnerCity = (Spinner) getActivity().findViewById(R.id.sp_city);
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.rv_list);
         mRecyclerView.setHasFixedSize(true);
@@ -54,10 +60,17 @@ public class SegmentFragment extends Fragment implements RecyclerViewOnClickList
 
     @Override
     public void onClickListener(View view, int position) {
-        Intent intent = new Intent(getActivity(), SegmentCategoryActivity.class);
-        intent.putExtra(Utility.SEGMENTO, mList.get(position).getName());
-        intent.putExtra(Utility.SEGMENTO_FIREBASE, mList.get(position).getNameFirebase());
-        startActivity(intent);
+        if(!spinnerCity.getSelectedItem().equals("Selecione")) {
+            Intent intent = new Intent(getActivity(), SegmentCategoryActivity.class);
+            intent.putExtra(Utility.SEGMENTO, mList.get(position).getName());
+            intent.putExtra(Utility.SEGMENTO_FIREBASE, mList.get(position).getNameFirebase());
+            intent.putExtra(Utility.KEY_CONTENT_EXTRA_CITY, spinnerCity.getSelectedItem().toString());
+            startActivity(intent);
+        }else{
+            Toast.makeText(getActivity(),
+                    "Por favor, selecione a cidade antes de clicar em alguma categoria",
+                    Toast.LENGTH_LONG).show();
+        }
     }
 
     private static class RecyclerViewTouchListener implements RecyclerView.OnItemTouchListener {

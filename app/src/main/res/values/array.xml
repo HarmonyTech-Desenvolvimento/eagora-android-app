@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="state">
-        <item>Estado</item>
+        <item>Selecione</item>
+        <item>Mato Grosso do Sul</item>
+        <item>São Paulo</item>
     </string-array>
 
-    <string-array name="city">
-        <item>Cidade</item>
-        <item>Mato Groso do Sull</item>
-        <item>São Paulo</item>
+    <string-array name="ms">
+        <item>Selecione</item>
+        <item>Água Clara</item>
+        <item>Aparecida do Taboado</item>
+        <item>Brasilândia</item>
+        <item>Bataguassu</item>
+        <item>Campo Grande</item>
+        <item>Paranaíba</item>
+        <item>Três Lagoas</item>
+    </string-array>
+
+    <string-array name="sp">
+        <item>Selecione</item>
+        <item>Andradina</item>
+        <item>Araçatuba</item>
+        <item>Auriflama</item>
+        <item>Dracena</item>
+        <item>Jales</item>
+        <item>Lins</item>
+        <item>Mirandópolis</item>
+        <item>Penápolis</item>
+        <item>Presidente Prudente</item>
+        <item>Santa Fé do Sul</item>
     </string-array>
 </resources>

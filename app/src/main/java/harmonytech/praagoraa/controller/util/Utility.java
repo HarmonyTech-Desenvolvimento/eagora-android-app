@@ -21,6 +21,10 @@ import android.widget.Toast;
 
 import com.androidadvance.topsnackbar.TSnackbar;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import harmonytech.praagoraa.R;
 
 public class Utility {
@@ -65,6 +69,7 @@ public class Utility {
 
     public static final String KEY_CONTENT_EXTRA_DATABASE = "database";
     public static final String KEY_CONTENT_EXTRA_DATA = "data";
+    public static final String KEY_CONTENT_EXTRA_CITY = "city";
 
     public static final String LOGIN_SHARED_PREF_NAME = "LoginActivityPreferences";
 
@@ -125,7 +130,7 @@ public class Utility {
         snackbar.show();
     }
 
-    public static String unmask(String s) {
+    private static String unmask(String s) {
         return s.replaceAll("[.]", "").replaceAll("[-]", "")
                 .replaceAll("[/]", "").replaceAll("[(]", "")
                 .replaceAll("[)]", "");
@@ -202,5 +207,28 @@ public class Utility {
             Toast.makeText(activity.getApplicationContext(), "Error/n" + e.toString(), Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    public static Map<String, String> getArrayCities(){
+        HashMap<String, String> cities = new HashMap<>();
+        cities.put("Água Clara", "agua_clara");
+        cities.put("Aparecida do Taboado", "aparecida_taboado");
+        cities.put("Brasilândia", "brasilandia");
+        cities.put("Bataguassu", "bataguassu");
+        cities.put("Campo Grande", "campo_grande");
+        cities.put("Paranaíba", "paranaiba");
+        cities.put("Três Lagoas", "tres_lagoas");
+        cities.put("Andradina", "andradina");
+        cities.put("Araçatuba", "aracatuba");
+        cities.put("Auriflama", "auriflama");
+        cities.put("Dracena", "dracena");
+        cities.put("Jales", "jales");
+        cities.put("Lins", "lins");
+        cities.put("Mirandópolis", "mirandopolis");
+        cities.put("Penápolis", "penapolis");
+        cities.put("Presidente Prudente", "presidente_prudente");
+        cities.put("Santa Fé do Sul", "santa_fe_sul");
+
+        return cities;
     }
 }

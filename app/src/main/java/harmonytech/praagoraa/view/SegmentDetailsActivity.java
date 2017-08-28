@@ -34,7 +34,7 @@ public class SegmentDetailsActivity extends AppCompatActivity {
     ValueEventListener valueEventListener;
     ValueEventListener singleValueEventListener;
 
-    String category, subcategory, title, subtitle;
+    String category, subcategory, title, subtitle, city;
 
     ArrayList<Provider> providers;
 
@@ -59,6 +59,7 @@ public class SegmentDetailsActivity extends AppCompatActivity {
         subtitle = getIntent().getStringExtra(Utility.SEGMENT_DETAILS_SUBTITLE);
         category = getIntent().getStringExtra(FirebaseHelper.FIREBASE_DATABASE_PROVIDER_CATEGORY);
         subcategory = getIntent().getStringExtra(FirebaseHelper.FIREBASE_DATABASE_PROVIDER_SUBCATEGORY);
+        city = getIntent().getStringExtra(Utility.KEY_CONTENT_EXTRA_CITY);
 
         setupUI();
 
@@ -82,7 +83,8 @@ public class SegmentDetailsActivity extends AppCompatActivity {
             segmentoFirebase = mDatabase
                     .child(category)
                     .child(subcategory)
-                    .orderByChild(FirebaseHelper.FIREBASE_DATABASE_ORDERBY);
+                    .orderByChild(FirebaseHelper.FIREBASE_DATABASE_ORDERBY)
+                    .equalTo(city);
         }
     }
 
