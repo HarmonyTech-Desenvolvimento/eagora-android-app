@@ -84,14 +84,18 @@
                 <Spinner
                     android:id="@+id/sp_state"
                     android:layout_width="125dp"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_vertical">
                 </Spinner>
 
                 <Spinner
                     android:id="@+id/sp_city"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical">
                 </Spinner>
             </LinearLayout>
 
