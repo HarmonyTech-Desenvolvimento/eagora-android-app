@@ -75,12 +75,11 @@
             android:label="@string/screen_contact_us"
             android:parentActivityName="harmonytech.praagoraa.view.MainActivity"
             android:screenOrientation="portrait" />
-        />
+
         <activity
             android:name="harmonytech.praagoraa.view.SignWithActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name="harmonytech.praagoraa.view.UsersCategoryActivity"
             android:screenOrientation="portrait"

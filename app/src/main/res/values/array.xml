@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="state">
-        <item>Selecione</item>
+        <item>Estado</item>
         <item>Mato Grosso do Sul</item>
         <item>São Paulo</item>
     </string-array>
 
     <string-array name="ms">
-        <item>Selecione</item>
+        <item>Cidade</item>
         <item>Água Clara</item>
         <item>Aparecida do Taboado</item>
         <item>Brasilândia</item>
@@ -18,7 +18,7 @@
     </string-array>
 
     <string-array name="sp">
-        <item>Selecione</item>
+        <item>Cidade</item>
         <item>Andradina</item>
         <item>Araçatuba</item>
         <item>Auriflama</item>

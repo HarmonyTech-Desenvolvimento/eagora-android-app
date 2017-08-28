@@ -29,7 +29,8 @@ public class RegisterServiceActivity extends AppCompatActivity implements View.O
     Button btnCadastrar;
     TextInputLayout etNome, etEmail, etCEP, etNascimento, etCPF, etTelefone;
     EditText etDescription;
-    Spinner spCategoria, spEspecialidade;
+    Spinner spCategoria, spEspecialidade, spinnerState, spinnerCity;
+
 
     DatabaseReference mDatabase;
 
@@ -58,7 +59,6 @@ public class RegisterServiceActivity extends AppCompatActivity implements View.O
         etNome = (TextInputLayout) findViewById(R.id.etNome);
         etEmail = (TextInputLayout) findViewById(R.id.etEmail);
         etNascimento = (TextInputLayout) findViewById(R.id.etNascimento);
-        etCEP = (TextInputLayout) findViewById(R.id.etCity);
         etCPF = (TextInputLayout) findViewById(R.id.etCpf);
         etTelefone = (TextInputLayout) findViewById(R.id.etTelefone);
         etDescription = (EditText) findViewById(R.id.description);
@@ -75,7 +75,13 @@ public class RegisterServiceActivity extends AppCompatActivity implements View.O
         btnCadastrar = (Button) findViewById(R.id.btnCadastrar);
         btnCadastrar.setOnClickListener(this);
 
+        spinnerState = (Spinner) findViewById(R.id.sp_state);
+        spinnerCity = (Spinner) findViewById(R.id.sp_city);
+
         mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        fillCity();
+        fillState();
     }
 
     @Override
@@ -231,5 +237,17 @@ public class RegisterServiceActivity extends AppCompatActivity implements View.O
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    public void fillState(){
+        ArrayAdapter<String> spinnerCountShoesArrayAdapterState = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.state));
+        spinnerState.setAdapter(spinnerCountShoesArrayAdapterState);
+    }
+
+    public void fillCity(){
+        ArrayAdapter<String> spinnerCountShoesArrayAdapterState = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.sp));
+        spinnerCity.setAdapter(spinnerCountShoesArrayAdapterState);
     }
 }

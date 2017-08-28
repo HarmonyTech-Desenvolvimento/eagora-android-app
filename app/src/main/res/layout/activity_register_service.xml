@@ -45,7 +45,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp">
-
             </Spinner>
 
             <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextInputLayout
@@ -119,20 +118,21 @@
 
             </harmonytech.praagoraa.controller.custom_widgets.MyCustomTextInputLayout>
 
-
-            <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextInputLayout
-                android:id="@+id/etCity"
+            <Spinner
+                android:id="@+id/sp_state"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:theme="@style/TextLabel"
-                android:hint="Cidade">
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_vertical">
+            </Spinner>
 
-                    <harmonytech.praagoraa.controller.custom_widgets.MyCustomEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="text"/>
-
-            </harmonytech.praagoraa.controller.custom_widgets.MyCustomTextInputLayout>
+            <Spinner
+                android:id="@+id/sp_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_vertical">
+            </Spinner>
 
             <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
                 android:layout_width="wrap_content"
