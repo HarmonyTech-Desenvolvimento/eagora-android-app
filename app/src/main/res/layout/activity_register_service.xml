@@ -118,21 +118,21 @@
 
             </harmonytech.praagoraa.controller.custom_widgets.MyCustomTextInputLayout>
 
-            <Spinner
+            <harmonytech.praagoraa.controller.custom_widgets.MyCustomSpinner
                 android:id="@+id/sp_state"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center_vertical">
-            </Spinner>
+            </harmonytech.praagoraa.controller.custom_widgets.MyCustomSpinner>
 
-            <Spinner
+            <harmonytech.praagoraa.controller.custom_widgets.MyCustomSpinner
                 android:id="@+id/sp_city"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_gravity="center_vertical">
-            </Spinner>
+                android:layout_gravity="center_vertical"/>
+
 
             <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
                 android:layout_width="wrap_content"

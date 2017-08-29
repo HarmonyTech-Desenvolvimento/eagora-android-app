@@ -72,8 +72,6 @@
                     android:layout_height="31dp"
                     android:layout_marginLeft="34dp"
                     android:background="@drawable/pra_agora_icon_delete_publication" />
-
-
             </LinearLayout>
 
         </LinearLayout>
