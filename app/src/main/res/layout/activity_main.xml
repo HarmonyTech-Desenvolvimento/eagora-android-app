@@ -82,7 +82,7 @@
                 android:layout_height="35dp"
                 android:background="@color/colorPrimary">
                 <Spinner
-                    android:id="@+id/sp_state"
+                    android:id="@+id/main_sp_state"
                     android:layout_width="125dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -90,7 +90,7 @@
                 </Spinner>
 
                 <Spinner
-                    android:id="@+id/sp_city"
+                    android:id="@+id/main_sp_city"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"

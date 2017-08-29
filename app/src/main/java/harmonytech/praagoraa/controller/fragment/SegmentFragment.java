@@ -38,7 +38,7 @@ public class SegmentFragment extends Fragment implements RecyclerViewOnClickList
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_segment, container, false);
 
-        spinnerCity = (Spinner) getActivity().findViewById(R.id.sp_city);
+        spinnerCity = (Spinner) getActivity().findViewById(R.id.main_sp_city);
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.rv_list);
         mRecyclerView.setHasFixedSize(true);
@@ -60,7 +60,7 @@ public class SegmentFragment extends Fragment implements RecyclerViewOnClickList
 
     @Override
     public void onClickListener(View view, int position) {
-        if(!spinnerCity.getSelectedItem().equals("Selecione")) {
+        if(!spinnerCity.getSelectedItem().equals("Cidade")) {
             Intent intent = new Intent(getActivity(), SegmentCategoryActivity.class);
             intent.putExtra(Utility.SEGMENTO, mList.get(position).getName());
             intent.putExtra(Utility.SEGMENTO_FIREBASE, mList.get(position).getNameFirebase());

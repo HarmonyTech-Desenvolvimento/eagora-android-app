@@ -75,8 +75,11 @@ public class RegisterServiceActivity extends AppCompatActivity implements View.O
         btnCadastrar = (Button) findViewById(R.id.btnCadastrar);
         btnCadastrar.setOnClickListener(this);
 
-        spinnerState = (Spinner) findViewById(R.id.sp_state);
+        spinnerState = (Spinner)findViewById(R.id.sp_state);
+        spinnerState.setOnItemSelectedListener(this);
         spinnerCity = (Spinner) findViewById(R.id.sp_city);
+        spinnerCity.setOnItemSelectedListener(this);
+        spinnerCity.setEnabled(false);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
@@ -96,7 +99,7 @@ public class RegisterServiceActivity extends AppCompatActivity implements View.O
     }
 
     public void attemptLogin(){
-        String name, email, birth, postalCode, cpf, phone, description;
+        String name, email, birth, city, cpf, phone, description;
         double rate;
 
         boolean allFieldsFilled = true;
@@ -106,7 +109,7 @@ public class RegisterServiceActivity extends AppCompatActivity implements View.O
         name = etNome.getEditText().getText().toString();
         email = etEmail.getEditText().getText().toString();
         birth = etNascimento.getEditText().getText().toString();
-        postalCode = etCEP.getEditText().getText().toString();
+        city = spinnerCity.getSelectedItem().toString();
         cpf = etCPF.getEditText().getText().toString();
         phone = etTelefone.getEditText().getText().toString();
         description = etDescription.getText().toString();
@@ -153,11 +156,9 @@ public class RegisterServiceActivity extends AppCompatActivity implements View.O
             etNascimento.setErrorEnabled(false);
         }
 
-        if(postalCode.equals("")){
+        if(city.equals("Cidade")){
             allFieldsFilled = false;
-            etCEP.setError("Campo obrigatório");
-        }else{
-            etCEP.setErrorEnabled(false);
+            Toast.makeText(this, "Campo de Estado/Cidade são obrigatórios", Toast.LENGTH_SHORT).show();
         }
 
         if(allFieldsFilled) {
@@ -195,14 +196,14 @@ public class RegisterServiceActivity extends AppCompatActivity implements View.O
         }
 
         if(allFieldsFilled && allFilledRight && allFilledCorrectly) {
-            writeNewProvider(name, email, birth, postalCode, cpf, phone, rate, description);
+            writeNewProvider(name, email, birth, city, cpf, phone, rate, description);
             Toast.makeText(this, "Cadastrado com sucesso", Toast.LENGTH_SHORT).show();
             finish();
         }
     }
 
-    private void writeNewProvider(String name, String email, String birth, String postalCode, String cpf, String phone, double rate, String description) {
-        ProviderFirebase providerFirebase = new ProviderFirebase(name, email, birth, postalCode, cpf, phone, rate, description);
+    private void writeNewProvider(String name, String email, String birth, String city, String cpf, String phone, double rate, String description) {
+        ProviderFirebase providerFirebase = new ProviderFirebase(name, email, birth, city, cpf, phone, rate, description);
 
         mDatabase
                 .child(segmentosFirebase.get(spCategoria.getSelectedItem().toString()))
@@ -224,12 +225,34 @@ public class RegisterServiceActivity extends AppCompatActivity implements View.O
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         int id = adapterView.getId();
+        String state = spinnerState.getSelectedItem().toString();
 
         switch (id){
             case R.id.spCategorias:
-
                 adapterSubCategorias = new ArrayAdapter<>(getApplicationContext(), R.layout.spinner_item, subareas.get(spCategoria.getSelectedItem().toString()).get(Utility.HASH_MAP_TELA));
                 spEspecialidade.setAdapter(adapterSubCategorias); // this will set list of values to spinner
+                break;
+            case R.id.sp_state:
+                switch (state) {
+                    case "Mato Grosso do Sul": {
+                        spinnerCity.setEnabled(true);
+                        ArrayAdapter<String> spinnerCountShoesArrayAdapterState = new ArrayAdapter<>(this,
+                                android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.ms));
+                        spinnerCity.setAdapter(spinnerCountShoesArrayAdapterState);
+                        break;
+                    }
+                    case "São Paulo": {
+                        spinnerCity.setEnabled(true);
+                        ArrayAdapter<String> spinnerCountShoesArrayAdapterState = new ArrayAdapter<>(this,
+                                android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.sp));
+                        spinnerCity.setAdapter(spinnerCountShoesArrayAdapterState);
+                        break;
+                    }
+                    default:
+                        spinnerCity.setSelection(0);
+                        spinnerCity.setEnabled(false);
+                        break;
+                }
                 break;
         }
     }

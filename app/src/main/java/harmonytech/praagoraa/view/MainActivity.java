@@ -98,9 +98,9 @@ public class MainActivity extends AppCompatActivity
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        spinnerState = (Spinner)findViewById(R.id.sp_state);
+        spinnerState = (Spinner)findViewById(R.id.main_sp_state);
         spinnerState.setOnItemSelectedListener(this);
-        spinnerCity = (Spinner) findViewById(R.id.sp_city);
+        spinnerCity = (Spinner) findViewById(R.id.main_sp_city);
         spinnerCity.setOnItemSelectedListener(this);
         spinnerCity.setEnabled(false);
 
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity
         String state = spinnerState.getSelectedItem().toString();
 
         switch (id){
-            case R.id.sp_state:
+            case R.id.main_sp_state:
                 switch (state) {
                     case "Mato Grosso do Sul": {
                         spinnerCity.setEnabled(true);
