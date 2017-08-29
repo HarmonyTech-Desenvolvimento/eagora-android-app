@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -27,10 +28,11 @@ import harmonytech.praagoraa.controller.util.Utility;
 public class RegisterServiceActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener{
 
     Button btnCadastrar;
-    TextInputLayout etNome, etEmail, etCEP, etNascimento, etCPF, etTelefone;
+    TextInputLayout etNome, etEmail, etNascimento, etCPF, etTelefone;
     EditText etDescription;
     Spinner spCategoria, spEspecialidade, spinnerState, spinnerCity;
 
+    private FirebaseAuth mAuth;
 
     DatabaseReference mDatabase;
 
@@ -45,6 +47,8 @@ public class RegisterServiceActivity extends AppCompatActivity implements View.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_service);
+
+        mAuth = FirebaseAuth.getInstance();
 
         ActionBar actionBar = getSupportActionBar();
 
@@ -99,13 +103,14 @@ public class RegisterServiceActivity extends AppCompatActivity implements View.O
     }
 
     public void attemptLogin(){
-        String name, email, birth, city, cpf, phone, description;
+        String uid, name, email, birth, city, cpf, phone, description;
         double rate;
 
         boolean allFieldsFilled = true;
         boolean allFilledRight = true;
         boolean allFilledCorrectly = true;
 
+        uid = mAuth.getCurrentUser().getUid();
         name = etNome.getEditText().getText().toString();
         email = etEmail.getEditText().getText().toString();
         birth = etNascimento.getEditText().getText().toString();
@@ -196,19 +201,19 @@ public class RegisterServiceActivity extends AppCompatActivity implements View.O
         }
 
         if(allFieldsFilled && allFilledRight && allFilledCorrectly) {
-            writeNewProvider(name, email, birth, city, cpf, phone, rate, description);
+            writeNewProvider(uid, name, email, birth, city, cpf, phone, rate, description);
             Toast.makeText(this, "Cadastrado com sucesso", Toast.LENGTH_SHORT).show();
             finish();
         }
     }
 
-    private void writeNewProvider(String name, String email, String birth, String city, String cpf, String phone, double rate, String description) {
+    private void writeNewProvider(String uid, String name, String email, String birth, String city, String cpf, String phone, double rate, String description) {
         ProviderFirebase providerFirebase = new ProviderFirebase(name, email, birth, city, cpf, phone, rate, description);
 
         mDatabase
                 .child(segmentosFirebase.get(spCategoria.getSelectedItem().toString()))
                 .child(subareas.get(spCategoria.getSelectedItem().toString()).get(Utility.HASH_MAP_FIREBASE).get(spEspecialidade.getSelectedItemPosition()))
-                .child(cpf).setValue(providerFirebase);
+                .child(uid).setValue(providerFirebase);
     }
 
     public void setupFieldMasks(){

@@ -6,4 +6,4 @@
     android:layout_height="match_parent"
     tools:context="harmonytech.praagoraa.view.PublicationsActivity">
 
-</android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>                           
