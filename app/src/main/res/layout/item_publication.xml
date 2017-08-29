@@ -23,13 +23,14 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:gravity="center">
 
                 <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
-                    android:id="@+id/provider_name"
-                    android:text="Deldo de fresa"
+                    android:id="@+id/publication_category"
+                    android:text="Animais"
                     android:fontFamily="sans-serif"
-                    android:textSize="15dp"
+                    android:textSize="20sp"
                     android:textColor="#333333"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -40,46 +41,40 @@
 
 
                 <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
-                    android:id="@+id/provider_phone"
+                    android:id="@+id/publication_subcategory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Telefone"
-                    android:textSize="13dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginRight="10dp"/>
-
-                <harmonytech.praagoraa.controller.custom_widgets.MyCustomTextView
-                    android:id="@+id/provider_email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Email"
-                    android:textSize="13dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginLeft="10dp"
+                    android:textSize="17dp"
+                    android:layout_marginTop="4dp""
                     android:layout_marginStart="10dp"
                     android:layout_marginRight="10dp"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"            >
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginLeft="170dp">
 
-                <RatingBar
-                    android:id="@+id/provider_rate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Base.Widget.AppCompat.RatingBar.Small"
-                    android:layout_gravity="end"
-                    android:numStars="5"
-                    android:stepSize="0.1"
-                    android:layout_marginRight="10dp"
-                    android:theme="@style/RatingBar"/>
+                <ImageButton
+                    android:id="@+id/publication_edit"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:background="@drawable/pra_agora_icon_edit_publication" />
+
+                <ImageButton
+                    android:id="@+id/publication_delete"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginLeft="34dp"
+                    android:background="@drawable/pra_agora_icon_delete_publication" />
+
+
             </LinearLayout>
 
         </LinearLayout>
