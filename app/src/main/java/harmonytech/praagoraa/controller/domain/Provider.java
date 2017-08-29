@@ -4,8 +4,16 @@ import java.io.Serializable;
 
 public class Provider implements Serializable{
 
-    private String name, email, birth, postalCode, cpf, phone, category, subcategory, description;
+    private String name, email, birth, city, cpf, phone, category, subcategory, description;
     private double rate;
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 
     public String getDescription() {
         return description;
@@ -69,14 +77,6 @@ public class Provider implements Serializable{
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getPostalCode() {
-        return postalCode;
-    }
-
-    public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
     }
 
     public String getBirth() {
