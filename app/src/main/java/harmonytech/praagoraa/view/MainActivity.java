@@ -190,7 +190,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(this, RegisterServiceActivity.class));
 
         } else if (id == R.id.nav_publicacoes) {
-            startActivity(new Intent(this, RegisterServiceActivity.class));
+            startActivity(new Intent(this, PublicationsActivity.class));
 
         } else if (id == R.id.nav_termos_uso) {
             startActivity(new Intent(this, TermsConditionsActivity.class));
