@@ -21,6 +21,7 @@
     <string name="app_name_main">Pra agora</string>
     <string name="label_main_categorias">Categorias</string>
     <string name="loading_providers_pls_wait">Carregando prestadores, por favor aguarde…</string>
+    <string name="loading_publications_pls_wait">Carregando suas publicações, por favor aguarde…</string>
     <string name="error_loading_providers">Erro ao carregar os prestadores.</string>
     <string name="title_activity_main2">Main2Activity</string>
 
