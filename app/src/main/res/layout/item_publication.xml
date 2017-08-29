@@ -5,7 +5,6 @@
     android:background="?android:attr/selectableItemBackground"
     android:layout_marginTop="7dp">
 
-
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -47,7 +46,7 @@
                     android:text="Acessórios"
                     android:textSize="17dp"
                     android:layout_marginTop="4dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="11dp"
                     android:layout_marginRight="10dp"/>
 
             </LinearLayout>
@@ -59,7 +58,7 @@
                 android:layout_alignParentRight="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:layout_marginLeft="170dp">
+                android:layout_marginLeft="150dp">
 
                 <ImageButton
                     android:id="@+id/publication_edit"
