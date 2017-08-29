@@ -30,7 +30,7 @@ public class PublicationAdapter extends RecyclerView.Adapter<PublicationAdapter.
     @Override
     public PublicationAdapter.MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
 
-        View v = mLayoutInflater.inflate(R.layout.item_provider, viewGroup, false);
+        View v = mLayoutInflater.inflate(R.layout.item_publication, viewGroup, false);
         return new PublicationAdapter.MyViewHolder(v);
     }
 

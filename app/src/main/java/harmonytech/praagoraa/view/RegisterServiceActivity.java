@@ -19,9 +19,11 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.UUID;
 
 import harmonytech.praagoraa.R;
 import harmonytech.praagoraa.controller.domain.ProviderFirebase;
+import harmonytech.praagoraa.controller.util.FirebaseHelper;
 import harmonytech.praagoraa.controller.util.Singleton;
 import harmonytech.praagoraa.controller.util.Utility;
 
@@ -218,6 +220,11 @@ public class RegisterServiceActivity extends AppCompatActivity implements View.O
                 .child(category)
                 .child(subcategory)
                 .child(uid).setValue(providerFirebase);
+
+        mDatabase
+                .child(FirebaseHelper.FIREBASE_DATABASE_ALL)
+                .child(uid)
+                .child(UUID.randomUUID().toString()).setValue(providerFirebase);
     }
 
     public void setupFieldMasks(){

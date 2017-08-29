@@ -27,7 +27,7 @@ public class PublicationFragment extends Fragment implements RecyclerViewOnClick
 
     RecyclerView mRecyclerView;
     public List<Provider> mList;
-    public ProviderAdapter adapter;
+    public PublicationAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -42,8 +42,8 @@ public class PublicationFragment extends Fragment implements RecyclerViewOnClick
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(linearLayoutManager);
 
-//        mList = ((PublicationsActivity) getActivity()).getPublicationsList();
-//        adapter = new PublicationAdapter(getActivity(), mList);
+        mList = ((PublicationsActivity) getActivity()).getPublicationsList();
+        adapter = new PublicationAdapter(getActivity(), mList);
         adapter.setRecyclerViewOnClickListenerHack(this);
         mRecyclerView.setAdapter( adapter );
 
