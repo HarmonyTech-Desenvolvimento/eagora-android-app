@@ -189,6 +189,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_cadastrar) {
             startActivity(new Intent(this, RegisterServiceActivity.class));
 
+        } else if (id == R.id.nav_publicacoes) {
+            startActivity(new Intent(this, RegisterServiceActivity.class));
+
         } else if (id == R.id.nav_termos_uso) {
             startActivity(new Intent(this, TermsConditionsActivity.class));
 
@@ -247,6 +250,18 @@ public class MainActivity extends AppCompatActivity
             if(result.equals(FirebaseHelper.FIREBASE_DATABASE_USERS)){
                 Menu nav_Menu = navigationView.getMenu();
                 nav_Menu.findItem(R.id.nav_cadastrar).setVisible(false);
+                btnRegisterService.setVisibility(View.GONE);
+            }
+        }
+
+        if(database!= null && database.equals(FirebaseHelper.FIREBASE_DATABASE_USERS)){
+            Menu nav_Menu = navigationView.getMenu();
+            nav_Menu.findItem(R.id.nav_publicacoes).setVisible(false);
+            btnRegisterService.setVisibility(View.GONE);
+        }else{
+            if(result.equals(FirebaseHelper.FIREBASE_DATABASE_USERS)){
+                Menu nav_Menu = navigationView.getMenu();
+                nav_Menu.findItem(R.id.nav_publicacoes).setVisible(false);
                 btnRegisterService.setVisibility(View.GONE);
             }
         }

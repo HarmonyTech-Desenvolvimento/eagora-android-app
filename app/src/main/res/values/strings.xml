@@ -37,8 +37,9 @@
     <string name="label_menu_lateral_title">Pra agora</string>
     <string name="label_menu_lateral_categorias">Categorias</string>
     <string name="label_menu_lateral_cadastrar">Cadastrar Serviço</string>
+    <string name="label_menu_lateral_publicacoes">Minhas Publicações</string>
     <string name="label_menu_lateral_dicas">Dicas de Segurança</string>
-    <string name="label_menu_lateral_termos">Termos de uso</string>
+    <string name="label_menu_lateral_termos">Termos de Uso</string>
     <string name="label_menu_lateral_subtitulo">Contato e Dúvidas</string>
     <string name="label_menu_lateral_duvidas">Dúvidas Frequentes</string>
     <string name="label_menu_lateral_fale">Fale Conosco</string>

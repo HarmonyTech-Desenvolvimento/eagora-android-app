@@ -11,6 +11,10 @@
             android:icon="@drawable/nav_image_cadastro"
             android:title="@string/label_menu_lateral_cadastrar" />
         <item
+            android:id="@+id/nav_publicacoes"
+            android:icon="@drawable/pra_agora_icons_publications"
+            android:title="@string/label_menu_lateral_publicacoes" />
+        <item
             android:id="@+id/nav_termos_uso"
             android:icon="@drawable/nav_image_termos"
             android:title="@string/label_menu_lateral_termos" />
