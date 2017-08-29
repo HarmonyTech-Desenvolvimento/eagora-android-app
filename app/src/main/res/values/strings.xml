@@ -306,6 +306,7 @@
 
     <string name="screen_contact_us">Fale Conosco</string>
     <string name="phone_contact">"Telefone de Contato:\n (67)98157–2320"</string>
+    <string name="label_publications">"Minhas Publicações"</string>
 
     <string name="title_category">praAgora</string>
     <string name="text_category">Selecione como você deseja continuar...</string>
@@ -317,7 +318,6 @@
     <string name="senha_login">Senha</string>
     <string name="button_entrar_login">Entrar</string>
     <string name="ou_login">--------------------ou--------------------</string>
-
 
 
 </resources>
