@@ -208,11 +208,15 @@ public class RegisterServiceActivity extends AppCompatActivity implements View.O
     }
 
     private void writeNewProvider(String uid, String name, String email, String birth, String city, String cpf, String phone, double rate, String description) {
-        ProviderFirebase providerFirebase = new ProviderFirebase(name, email, birth, city, cpf, phone, rate, description);
+        String category = segmentosFirebase.get(spCategoria.getSelectedItem().toString());
+        String subcategory = subareas.get(spCategoria.getSelectedItem().toString())
+                .get(Utility.HASH_MAP_FIREBASE).get(spEspecialidade.getSelectedItemPosition());
+
+        ProviderFirebase providerFirebase = new ProviderFirebase(name, email, birth, city, cpf, phone, rate, description, category, subcategory);
 
         mDatabase
-                .child(segmentosFirebase.get(spCategoria.getSelectedItem().toString()))
-                .child(subareas.get(spCategoria.getSelectedItem().toString()).get(Utility.HASH_MAP_FIREBASE).get(spEspecialidade.getSelectedItemPosition()))
+                .child(category)
+                .child(subcategory)
                 .child(uid).setValue(providerFirebase);
     }
 

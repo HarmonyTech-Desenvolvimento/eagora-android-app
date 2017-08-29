@@ -5,14 +5,15 @@ import com.google.firebase.database.IgnoreExtraProperties;
 @IgnoreExtraProperties
 public class ProviderFirebase {
 
-    public String name, email, birth, cpf, city, phone, description;
+    public String name, email, birth, cpf, city, phone, description, category, subcategory;
     public double rate;
 
     public ProviderFirebase() {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
     }
 
-    public ProviderFirebase(String name, String email, String birth, String city, String cpf, String phone, double rate, String description) {
+    public ProviderFirebase(String name, String email, String birth, String city, String cpf, String phone,
+                            double rate, String description, String category, String subcategory) {
         this.name = name;
         this.email = email;
         this.birth = birth;
@@ -21,5 +22,7 @@ public class ProviderFirebase {
         this.phone = phone;
         this.rate = rate;
         this.description = description;
+        this.category = category;
+        this.subcategory = subcategory;
     }
 }
