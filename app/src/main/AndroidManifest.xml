@@ -82,13 +82,18 @@
         <activity
             android:name=".view.UsersCategoryActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".view.PublicationsActivity"
-            android:screenOrientation="portrait"
+            android:label="@string/label_publications"
             android:parentActivityName=".view.MainActivity"
-            android:label="@string/label_publications">
-
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".PlansActivity"
+            android:label="@string/label_plans"
+            android:parentActivityName=".view.MainActivity"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
