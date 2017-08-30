@@ -22,6 +22,7 @@ import harmonytech.praagoraa.controller.interfaces.RecyclerViewOnClickListenerHa
 import harmonytech.praagoraa.controller.util.Utility;
 import harmonytech.praagoraa.view.ProviderDetailsActivity;
 import harmonytech.praagoraa.view.PublicationsActivity;
+import harmonytech.praagoraa.view.RegisterServiceActivity;
 
 public class PublicationFragment extends Fragment implements RecyclerViewOnClickListenerHack{
 
@@ -55,7 +56,7 @@ public class PublicationFragment extends Fragment implements RecyclerViewOnClick
 
     @Override
     public void onClickListener(View view, int position) {
-        Intent intent = new Intent(getActivity(), ProviderDetailsActivity.class);
+        Intent intent = new Intent(getActivity(), RegisterServiceActivity.class);
         intent.putExtra(Utility.PROVIDER, mList.get(position));
         startActivity(intent);
     }

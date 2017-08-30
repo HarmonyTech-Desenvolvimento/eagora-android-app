@@ -55,7 +55,6 @@
         <activity
             android:name=".view.RegisterServiceActivity"
             android:label="@string/screen_register_service"
-            android:parentActivityName=".view.MainActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".view.DoubtActivity"
@@ -83,7 +82,7 @@
         <activity
             android:name=".view.UsersCategoryActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".view.PublicationsActivity"
             android:screenOrientation="portrait"

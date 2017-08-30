@@ -37,10 +37,8 @@ public class PublicationAdapter extends RecyclerView.Adapter<PublicationAdapter.
     @Override
     public void onBindViewHolder(PublicationAdapter.MyViewHolder myViewHolder, int position) {
 
-        myViewHolder.providerName.setText(mList.get(position).getName());
-        myViewHolder.providerEmail.setText(mList.get(position).getEmail());
-        myViewHolder.providerPhone.setText(mList.get(position).getPhone());
-        myViewHolder.providerRate.setRating((float)(mList.get(position).getRate()));
+        myViewHolder.publicationCategory.setText(mList.get(position).getCategoryScreen());
+        myViewHolder.publicationSubcategory.setText(mList.get(position).getSubcategoryScreen());
     }
 
     @Override
@@ -53,15 +51,12 @@ public class PublicationAdapter extends RecyclerView.Adapter<PublicationAdapter.
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener /*View.OnCreateContextMenuListener*/{
-        TextView providerName, providerEmail, providerPhone;
-        RatingBar providerRate;
+        TextView publicationCategory, publicationSubcategory;
 
         MyViewHolder(View itemView) {
             super(itemView);
-            providerName = (TextView) itemView.findViewById(R.id.provider_name);
-            providerEmail = (TextView) itemView.findViewById(R.id.provider_email);
-            providerPhone = (TextView) itemView.findViewById(R.id.provider_phone);
-            providerRate = (RatingBar) itemView.findViewById(R.id.provider_rate);
+            publicationCategory = (TextView) itemView.findViewById(R.id.publication_category);
+            publicationSubcategory = (TextView) itemView.findViewById(R.id.publication_subcategory);
 
             itemView.setOnClickListener(this);
         }

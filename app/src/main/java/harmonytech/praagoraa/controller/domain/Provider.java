@@ -4,8 +4,40 @@ import java.io.Serializable;
 
 public class Provider implements Serializable{
 
-    private String name, email, birth, city, cpf, phone, category, subcategory, description;
+    private String id, name, email, birth, city, cpf, phone, category, subcategory, description, categoryScreen, subcategoryScreen, state;
     private double rate;
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getCategoryScreen() {
+        return categoryScreen;
+    }
+
+    public void setCategoryScreen(String categoryScreen) {
+        this.categoryScreen = categoryScreen;
+    }
+
+    public String getSubcategoryScreen() {
+        return subcategoryScreen;
+    }
+
+    public void setSubcategoryScreen(String subcategoryScreen) {
+        this.subcategoryScreen = subcategoryScreen;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getCity() {
         return city;

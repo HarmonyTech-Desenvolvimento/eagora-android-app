@@ -87,6 +87,10 @@ public class PublicationsActivity extends AppCompatActivity {
                     p.setRate((Double) postSnapshot.child(FirebaseHelper.FIREBASE_DATABASE_PROVIDER_RATE).getValue());
                     p.setCategory((String)postSnapshot.child(FirebaseHelper.FIREBASE_DATABASE_PROVIDER_CATEGORY).getValue());
                     p.setSubcategory((String)postSnapshot.child(FirebaseHelper.FIREBASE_DATABASE_PROVIDER_SUBCATEGORY).getValue());
+                    p.setCategoryScreen((String)postSnapshot.child(FirebaseHelper.FIREBASE_DATABASE_PROVIDER_CATEGORY_SCREEN).getValue());
+                    p.setSubcategoryScreen((String)postSnapshot.child(FirebaseHelper.FIREBASE_DATABASE_PROVIDER_SUBCATEGORY_SCREEN).getValue());
+                    p.setState((String)postSnapshot.child(FirebaseHelper.FIREBASE_DATABASE_PROVIDER_STATE).getValue());
+                    p.setId(postSnapshot.getKey());
 
                     publications.add(p);
                 }
@@ -106,11 +110,9 @@ public class PublicationsActivity extends AppCompatActivity {
                 if(frag == null) {
                     frag = new PublicationFragment();
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                    ft.replace(R.id.providers_fragment_container, frag, "mainFrag");
+                    ft.replace(R.id.publications_fragment_container, frag, "mainFrag");
                     ft.commit();
                 }
-
-                Toast.makeText(PublicationsActivity.this, String.valueOf(publications.size()), Toast.LENGTH_SHORT).show();
 
                 dialog.dismiss();
             }

@@ -14,8 +14,11 @@ public class FirebaseHelper {
     public static final String FIREBASE_DATABASE_PROVIDER_CPF = "cpf";
     public static final String FIREBASE_DATABASE_PROVIDER_BIRTH = "birth";
     public static final String FIREBASE_DATABASE_PROVIDER_CATEGORY = "category";
+    public static final String FIREBASE_DATABASE_PROVIDER_CATEGORY_SCREEN = "categoryScreen";
     public static final String FIREBASE_DATABASE_PROVIDER_SUBCATEGORY = "subcategory";
+    public static final String FIREBASE_DATABASE_PROVIDER_SUBCATEGORY_SCREEN = "subcategoryScreen";
     public static final String FIREBASE_DATABASE_PROVIDER_RATE = "rate";
+    public static final String FIREBASE_DATABASE_PROVIDER_STATE = "state";
 
     public static final String FIREBASE_DATABASE_ORDERBY= "city";
 
