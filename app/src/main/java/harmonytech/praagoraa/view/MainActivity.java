@@ -32,6 +32,7 @@ import com.google.firebase.auth.FirebaseUser;
 import java.util.ArrayList;
 import java.util.List;
 
+import harmonytech.praagoraa.PlansActivity;
 import harmonytech.praagoraa.R;
 import harmonytech.praagoraa.controller.domain.Segment;
 import harmonytech.praagoraa.controller.fragment.SegmentFragment;
@@ -191,6 +192,9 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_publicacoes) {
             startActivity(new Intent(this, PublicationsActivity.class));
+
+        } else if (id == R.id.nav_plans) {
+            startActivity(new Intent(this, PlansActivity.class));
 
         } else if (id == R.id.nav_termos_uso) {
             startActivity(new Intent(this, TermsConditionsActivity.class));
