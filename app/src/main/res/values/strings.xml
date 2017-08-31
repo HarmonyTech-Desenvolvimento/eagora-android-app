@@ -309,7 +309,7 @@
     <string name="screen_contact_us">Fale Conosco</string>
     <string name="phone_contact">"Telefone de Contato:\n (67)98157–2320"</string>
     <string name="label_publications">"Minhas Publicações"</string>
-    <string name="label_plans">"Planos de Pagemento"</string>
+    <string name="label_plans">"Planos de Pagamento"</string>
 
 
     <string name="title_category">praAgora</string>
@@ -322,6 +322,14 @@
     <string name="senha_login">Senha</string>
     <string name="button_entrar_login">Entrar</string>
     <string name="ou_login">--------------------ou--------------------</string>
+
+
+    <string name="plan_one">Primeiro Mês</string>
+    <string name="plan_two">Plano Mensal</string>
+    <string name="plan_three">Plano Trimestral</string>
+    <string name="plan_four">Plano Semestral</string>
+    <string name="plan_five">Plano Anual</string>
+
 
     <string name="plans_benefits_one"></string>
     <string name="plans_benefits_two"></string>

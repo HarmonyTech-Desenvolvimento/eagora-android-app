@@ -1,9 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="harmonytech.praagoraa.PlansActivity">
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-</RelativeLayout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="harmonytech.praagoraa.PlansActivity">
+
+        <RelativeLayout
+            android:id="@+id/plan_one"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_margin="7dp"
+            android:background="@color/asbestos">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plan_one"
+                    android:textSize="22dp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/plan_two"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_margin="7dp"
+            android:layout_below="@id/plan_one"
+            android:background="@color/asbestos">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plan_two"
+                    android:textSize="22dp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/plan_three"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_margin="7dp"
+            android:layout_below="@id/plan_two"
+            android:background="@color/asbestos">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plan_three"
+                    android:textSize="22dp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/plan_four"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_margin="7dp"
+            android:layout_below="@id/plan_three"
+            android:background="@color/asbestos">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plan_four"
+                    android:textSize="22dp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/plan_five"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_margin="7dp"
+            android:layout_below="@id/plan_four"
+            android:background="@color/asbestos">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plan_five"
+                    android:textSize="22dp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
